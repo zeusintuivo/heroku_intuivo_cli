@@ -1,0 +1,11 @@
+#!/bin/bash
+# 
+# @author Zeus Intuivo <zeus@intuivo.com>
+#
+#
+# REF: http://stackoverflow.com/questions/9713183/recompile-heroku-slug-without-push-or-config-change
+git commit --amend -C HEAD
+git push heroku master -f
+
+git commit --allow-empty -m "empty commit"
+git push heroku master
